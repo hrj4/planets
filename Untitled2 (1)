@@ -1,0 +1,12 @@
+DigraphContractEdge := function(D, x, y)
+  local V, P;
+  V := Difference(DigraphVertices(D), [x, y]);
+  P := List(V, z -> [z]);
+  Add(P, [x, y]);
+  return QuotientDigraph(D, P);
+end;
+
+1) Documentation
+2) Tests
+3) Put it in the appropriate file, install it as an operation.
+4) Argument checks.
